@@ -30,7 +30,10 @@
                         <a class="nav-link" href="/belanja">PR 1-belanja</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 3</a>
+                        <a class="nav-link" href="/nilai">PR 2-nilai</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ikan">PR 3-ikan</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>
