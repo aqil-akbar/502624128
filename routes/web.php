@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\BelanjaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -95,10 +96,16 @@ Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
 
-//route CRUD siswa
+//route CRUD siswa Pertemuan 14
 Route::get('/siswa', [SiswaController::class, 'index'])->name('siswa.index');
 Route::get('/siswa/create', [SiswaController::class, 'create'])->name('siswa.create');
 Route::post('/siswa', [SiswaController::class, 'store'])->name('siswa.store');
 Route::get('/siswa/{nrp}/edit', [SiswaController::class, 'edit'])->name('siswa.edit');
 Route::put('/siswa/{nrp}', [SiswaController::class, 'update'])->name('siswa.update');
 Route::delete('/siswa/{nrp}', [SiswaController::class, 'destroy'])->name('siswa.destroy');
+
+// Latihan EAS (D4)
+Route::get('/belanja', [BelanjaController::class, 'index'])->name('belanja.index');
+Route::get('/belanja/beli', [BelanjaController::class, 'beli'])->name('belanja.beli');
+Route::post('/belanja/simpan', [BelanjaController::class, 'simpan'])->name('belanja.simpan');
+Route::get('/belanja/batal/{id}', [BelanjaController::class, 'batal'])->name('belanja.batal');
