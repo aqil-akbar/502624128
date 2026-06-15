@@ -9,6 +9,7 @@ use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BelanjaController;
 use App\Http\Controllers\NilaiController;
 use App\Http\Controllers\IkanController;
+use App\Http\Controllers\PenggajianController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -126,3 +127,7 @@ Route::post('/ikan/update', [IkanController::class, 'update']);
 Route::get('/ikan/hapus/{id}', [IkanController::class, 'hapus']);
 Route::get('/ikan/cari', [IkanController::class, 'cari']);
 
+//EAS
+Route::get('/eas', [PenggajianController::class, 'index']);
+Route::get('/eas/tambah', [PenggajianController::class, 'tambah']);
+Route::post('/eas/store', [PenggajianController::class, 'store']);
